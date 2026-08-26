@@ -284,17 +284,17 @@ A few results stood out from the analysis:
 
 The results also show why looking at both absolute change and percentage change is useful. Iowa's cheese increase was the largest in absolute terms as well as percentage terms, while other states had much smaller changes that looked more significant when expressed as a percentage.
 
-The full outputs are available in the [`results`](./results/) folder, while the SQL used to produce them is available in the [`SQL`](./SQL/) folder.
+The full outputs are available in the [`Results`](./Results/) folder, while the SQL used to produce them is available in the [`SQL`](./SQL/) folder.
 
 ### Selected Results
 
-* [Milk Production Change — 2021 to 2022](./results/07_Milk_Production_Change_2021_2022.csv)
-* [States with Cheese Production Increases](./results/11_States_with_Cheese_Production_Increases.csv)
-* [Cheese Percentage Change by State](./results/13_Cheese_Percentage_Change_by_State.csv)
-* [Milk, Cheese & Yogurt Comparison](./results/15_Milk_Cheese_Yogurt_Comparison_by_State.csv)
-* [Cheese vs. Milk Production Change](./results/16_Cheese_vs_Milk_Production_Change_2021_2022.csv)
-* [State Production Profile](./results/17_Capstone_State_Production_Profile.csv)
-* [Production Share Analysis](./results/18_Capstone_Production_Share_Analysi.csv)
+* [Milk Production Change — 2021 to 2022](./Results/07_Milk_Production_Change_2021_2022.csv)
+* [States with Cheese Production Increases](./Results/11_States_with_Cheese_Production_Increases.csv)
+* [Cheese Percentage Change by State](./Results/13_Cheese_Percentage_Change_by_State.csv)
+* [Milk, Cheese & Yogurt Comparison](./Results/15_Milk_Cheese_Yogurt_Comparison_by_State.csv)
+* [Cheese vs. Milk Production Change](./Results/16_Cheese_vs_Milk_Production_Change_2021_2022.csv)
+* [State Production Profile](./Results/17_Capstone_State_Production_Profile.csv)
+* [Production Share Analysis](./Results/18_Capstone_Production_Share_Analysi.csv)
 
 
 ---
