@@ -270,21 +270,32 @@ The project also made it pretty clear that writing SQL that *runs* and writing S
 
 ---
 
-## Key findings
+## Key Findings
 
-The final findings will be based on the completed query outputs rather than assumptions from the raw data.
+A few results stood out from the analysis:
 
-Some of the main areas of interest include:
+* **Texas had the largest increase in milk production** between 2021 and 2022, increasing by **925 million**.
+* **New Mexico had the largest decrease in milk production**, declining by **656 million** over the same period.
+* **Iowa had the largest increase in cheese production**, with production increasing by **46.293 million** from 2021 to 2022.
+* Iowa also had the **highest percentage increase in cheese production at 13.47%**, followed by Illinois at 5.78%.
+* **Wisconsin accounted for 25.03% of the cheese production share** in the 2022 analysis, making it the largest state in that comparison.
+* **California accounted for 18.45% of milk production and 32.26% of yogurt production** in the corresponding 2022 share analysis.
+* **North Dakota accounted for 24.89% of honey production**, the largest share in the honey results.
 
-* The states that dominate production for individual commodities
-* The largest year-over-year production increases
-* The largest production decreases
-* Differences between absolute and percentage growth
-* Changes in states' shares of national production
-* Differences in milk and cheese growth
-* The dominant commodity across different states
+The results also show why looking at both absolute change and percentage change is useful. Iowa's cheese increase was the largest in absolute terms as well as percentage terms, while other states had much smaller changes that looked more significant when expressed as a percentage.
 
-> Final numerical findings will be added here alongside the relevant query results.
+The full outputs are available in the [`results`](./results/) folder, while the SQL used to produce them is available in the [`SQL`](./SQL/) folder.
+
+### Selected Results
+
+* [Milk Production Change — 2021 to 2022](./results/07_Milk_Production_Change_2021_2022.csv)
+* [States with Cheese Production Increases](./results/11_States_with_Cheese_Production_Increases.csv)
+* [Cheese Percentage Change by State](./results/13_Cheese_Percentage_Change_by_State.csv)
+* [Milk, Cheese & Yogurt Comparison](./results/15_Milk_Cheese_Yogurt_Comparison_by_State.csv)
+* [Cheese vs. Milk Production Change](./results/16_Cheese_vs_Milk_Production_Change_2021_2022.csv)
+* [State Production Profile](./results/17_Capstone_State_Production_Profile.csv)
+* [Production Share Analysis](./results/18_Capstone_Production_Share_Analysi.csv)
+
 
 ---
 
