@@ -294,7 +294,7 @@ The full outputs are available in the [`Results`](./Results/) folder, while the 
 * [Milk, Cheese & Yogurt Comparison](./Results/15_Milk_Cheese_Yogurt_Comparison_by_State.csv)
 * [Cheese vs. Milk Production Change](./Results/16_Cheese_vs_Milk_Production_Change_2021_2022.csv)
 * [State Production Profile](./Results/17_State_Multi_Commodity_Production_Profile.csv)
-* [Production Share Analysis](./Results/18_Capstone_Production_Share_Analysi.csv)
+* [Production Share Analysis](./Results/18_Capstone_Production_Share_Analysis.csv)
 
 
 ---
