@@ -16,7 +16,7 @@ Selected results will include:
 * Cross-commodity comparisons
 * Dominant commodity by state
 
-The SQL used to generate each result can be found in the [`sql`](../sql/) folder.
+The SQL used to generate each result can be found in the [`SQL`](../SQL/) folder.
 
 ## Results Format
 
