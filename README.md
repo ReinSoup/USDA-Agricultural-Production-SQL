@@ -33,7 +33,7 @@ The production tables use fields such as:
 
 The `state_lookup` table is used to turn the state identifiers into readable state names.
 
-The commodities used in the project include:
+The analysis covers six commodities:
 
 * Milk
 * Cheese
@@ -41,6 +41,8 @@ The commodities used in the project include:
 * Eggs
 * Honey
 * Coffee
+
+This allows me to look at production patterns both within individual commodities and across states.
 
 For annual analysis, I filter the production data to records where:
 
@@ -129,21 +131,18 @@ For example:
 State | Milk_Change | Cheese_Change | Growth_Leader
 ```
 
-I also compared production across milk, cheese, and yogurt to determine which commodity had the highest production in each state.
+I also brought milk, cheese, and yogurt together at the state level and used the results to compare their recorded production values.
 
 One thing I had to be careful about here was joining the raw production tables directly. Doing that before aggregation can multiply rows and give incorrect totals, so I aggregated each commodity first and joined the results afterward.
 
-### 4. Production share and state profiles
+### 4. Production Share and State Profiles
 
-The later queries look at production from a national perspective.
+The later queries look at production from two different perspectives.
 
-For example, I calculated each state's percentage of total U.S. cheese production and compared that share between 2021 and 2022.
+First, I calculated each state's percentage of total U.S. production for individual commodities and compared those shares between 2021 and 2022. This is useful because production growth and production share aren't necessarily the same thing. A state can increase its own production while still losing some of its share of total U.S. production.
 
-This is useful because production growth and production share aren't necessarily the same thing. A state can increase its own production while still losing some of its share of total U.S. production.
+I then created a state-level production profile by bringing several commodities together:
 
-The final part of the analysis brings several commodities together into a state-level profile:
-
-```text
 State
 Milk
 Cheese
@@ -151,10 +150,9 @@ Yogurt
 Eggs
 Honey
 Coffee
-Dominant_Commodity
-```
+Highest_Production_Commodity
 
-The `Dominant_Commodity` column is determined using `CASE` logic.
+This final profile uses multiple CTEs to combine the commodity data, while `COALESCE` handles missing values and `CASE` identifies the commodity with the highest recorded value.
 
 ---
 
@@ -190,7 +188,7 @@ The project gave me a chance to work with a lot more than basic querying.
 * `CASE`
 * Year-based calculations
 * Growth comparisons
-* Identifying the dominant commodity
+* Identifying the highest recorded production value
 * Custom sorting
 
 ### CTEs
@@ -232,21 +230,23 @@ The commodities can use different units and scales, so combining them without ch
 ## Project structure
 
 ```text
-usda-agricultural-production-sql/
+USDA-Agricultural-Production-SQL/
 │
 ├── README.md
 │
-├── sql/
-│   ├── Q01_...
-│   ├── Q02_...
-│   ├── Q03_...
+├── SQL/
+│   ├── 01_...
+│   ├── 02_...
 │   └── ...
 │
 ├── data/
-│   └── source_data/
+│   └── README.md
 │
-└── results/
-    └── query_outputs/
+└── Results/
+    ├── README.md
+    ├── 07_...
+    ├── 11_...
+    └── ...
 ```
 
 The SQL files are organized in the same general order as the analysis, starting with basic production queries and moving toward the more advanced comparisons.
@@ -293,7 +293,7 @@ The full outputs are available in the [`Results`](./Results/) folder, while the 
 * [Cheese Percentage Change by State](./Results/13_Cheese_Percentage_Change_by_State.csv)
 * [Milk, Cheese & Yogurt Comparison](./Results/15_Milk_Cheese_Yogurt_Comparison_by_State.csv)
 * [Cheese vs. Milk Production Change](./Results/16_Cheese_vs_Milk_Production_Change_2021_2022.csv)
-* [State Production Profile](./Results/17_Capstone_State_Production_Profile.csv)
+* [State Production Profile](./Results/17_State_Multi_Commodity_Production_Profile.csv)
 * [Production Share Analysis](./Results/18_Capstone_Production_Share_Analysi.csv)
 
 
